@@ -2,6 +2,8 @@ const path = require('path')
 const express = require('express')
 const fs = require('fs')
 // const friends = require('../data/friends.js')
+const match = require('../lib/match.js')
+
 
 const getFriends = () => {
   return new Promise((resolve, reject) => {
@@ -28,10 +30,22 @@ module.exports = app => {
           // res.end(friends)
           // console.log(typeof(friends), friends[0].scores)          
           // console.log(typeof(req.body), req.body)
-          friends.push(req.body)
-          console.log(friends)
+          let userScores = req.body.scores
+          let friendMatch = match.compare(userScores, friends)
+          console.log(friendMatch.name)
+          console.log(friendMatch.photo)
+          let ratePercent = friendMatch.rating === 0 ? '100%' : (100 - (friendMatch.rating / .4)) + '%'
+          console.log(ratePercent)
+          let matchObject = {
+            "name": friendMatch.name,
+            "photo": friendMatch.photo,
+            "percent": ratePercent
+          }
+          // console.log('before: ' + friends + userScore)
+          // friends.push(req.body)
+          // console.log('after: ' + friends)
           // res.end(newFriend)
-          res.end(JSON.stringify(friends))
+          res.end(JSON.stringify(matchObject))
         })
         .catch(err => console.log(err))
       // let newFriend = req.body
