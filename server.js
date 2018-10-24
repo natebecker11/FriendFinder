@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 htmlRoutes(app)
+apiRoutes(app)
 
 
 
