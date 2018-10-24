@@ -31,7 +31,7 @@ module.exports = app => {
           friends.push(req.body)
           console.log(friends)
           // res.end(newFriend)
-          res.end('ehhl')
+          res.end(JSON.stringify(friends))
         })
         .catch(err => console.log(err))
       // let newFriend = req.body
