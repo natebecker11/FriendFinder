@@ -17,7 +17,7 @@ module.exports = app => {
   app
     .get("/api/friends", (req, res) => {
       getFriends()
-        .then(friends => res.end(friends))
+        .then(friends => res.end(JSON.stringify(friends)))
         .catch(err => console.log(err))
       // return res.json(friends)
     })
