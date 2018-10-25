@@ -2,10 +2,42 @@
 
 
 const getValue = (question) => {
-  return $(`input[name=${question}]:checked`).val()
+  return Number($(`input[name=${question}]:checked`).val())
 }
 
-$(document).ready(() => {
-  let questions = Array.from($('.question-group'))
-  console.log(questions)
+const createResults = () => {
+  let name = $('#userName').val();
+  let photo = $('#userPhoto').val();
+  let questions = $('.question-group')  
+  let scores = [];
+  questions.each((i, question) => {scores.push(getValue(question.id))})
+  if (!name || !photo) return false
+  return {
+      "name": name,
+      "photo": photo,
+      "scores": scores
+    }
+}
+
+$('#submitBtn').on('click', (event) => {
+  event.preventDefault()
+  let result = createResults();
+  console.log(result)
+  console.log(JSON.stringify(result))
+  if (result) {
+    let obj = JSON.stringify(result);
+    $.ajax({
+      url: "http://localhost:3000/api/friends/",
+      method: "POST",
+      data: result
+    }).then(res => {console.log(res)})
+  }
 })
+
+
+
+// $(document).ready(() => {
+//   let questions = $('.question-group')
+//   questions.each((i, question) => {console.log(`${question.id}: ${getValue(question.id)}`)})
+//   // console.log(questions)
+// })

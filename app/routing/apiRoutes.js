@@ -24,7 +24,7 @@ module.exports = app => {
       // return res.json(friends)
     })
     .post("/api/friends", (req, res) => {
-      // console.log(req.body.name)
+      console.log(req.body)
       getFriends()
         .then(friends => {
           // res.end(friends)
@@ -45,6 +45,10 @@ module.exports = app => {
           // friends.push(req.body)
           // console.log('after: ' + friends)
           // res.end(newFriend)
+          res.writeHead(200, {
+            "Content-Type": "text/json",
+            "Access-Control-Allow-Origin": "http://localhost:3000"
+          })
           res.end(JSON.stringify(matchObject))
         })
         .catch(err => console.log(err))
