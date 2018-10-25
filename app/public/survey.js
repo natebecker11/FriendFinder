@@ -22,16 +22,16 @@ const createResults = () => {
 $('#submitBtn').on('click', (event) => {
   event.preventDefault()
   let result = createResults();
-  console.log(result)
-  console.log(JSON.stringify(result))
+  // console.log(result)
+  // console.log(JSON.stringify(result))
   if (result) {
-    let obj = JSON.stringify(result);
+    // let obj = JSON.stringify(result);
     $.ajax({
       url: "http://localhost:3000/api/friends/",
       method: "POST",
       data: result
     }).then(res => {console.log(res)})
-  }
+  } else {console.log('Fill em up!!!!!')}
 })
 
 
