@@ -26,32 +26,32 @@ module.exports = app => {
     .post("/api/friends", (req, res) => {
       console.log(req.body)
       getFriends()
-        .then(friends => {
-          // res.end(friends)
-          // console.log(typeof(friends), friends[0].scores)          
-          // console.log(typeof(req.body), req.body)
+        .then(friends => {       
           let userScores = req.body.scores
           let friendMatch = match.compare(userScores, friends)
-          console.log(friendMatch.name)
-          console.log(friendMatch.photo)
           let ratePercent = friendMatch.rating === 0 ? '100%' : (100 - (friendMatch.rating / .4)) + '%'
-          console.log(ratePercent)
           let matchObject = {
             "name": friendMatch.name,
             "photo": friendMatch.photo,
             "percent": ratePercent
           }
-          // console.log('before: ' + friends + userScore)
-          // friends.push(req.body)
-          // console.log('after: ' + friends)
-          // res.end(newFriend)
           res.writeHead(200, {
             "Content-Type": "text/json",
             "Access-Control-Allow-Origin": "http://localhost:3000"
           })
           res.end(JSON.stringify(matchObject))
+          return friends
         })
-        .then()
+        .then(oldFriends => {
+          oldFriends.push(req.body)
+          let newFriends = JSON.stringify(oldFriends)
+          // let newFriends = 'hefffffllo'
+          console.log(newFriends)
+          fs.writeFile(path.join('app', 'data', 'friends.json'), newFriends, (err, data) => {
+            if (err) throw err
+            console.log(data)
+          })
+        })
         .catch(err => console.log(err))
       // let newFriend = req.body
       // friends.push(newFriend)
