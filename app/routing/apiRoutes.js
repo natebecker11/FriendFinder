@@ -51,6 +51,7 @@ module.exports = app => {
           })
           res.end(JSON.stringify(matchObject))
         })
+        .then()
         .catch(err => console.log(err))
       // let newFriend = req.body
       // friends.push(newFriend)
