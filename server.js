@@ -10,6 +10,7 @@ const htmlRoutes = require('./app/routing/htmlRoutes.js')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'app', 'public')))
 
 htmlRoutes(app)
 apiRoutes(app)
