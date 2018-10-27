@@ -27,7 +27,7 @@ $('#submitBtn').on('click', (event) => {
   if (result) {
     // let obj = JSON.stringify(result);
     $.ajax({
-      url: "http://localhost:3000/api/friends/",
+      url: "/api/friends/",
       method: "POST",
       data: result
     }).then(res => {console.log(res)})
