@@ -30,7 +30,9 @@ $('#submitBtn').on('click', (event) => {
       url: "/api/friends/",
       method: "POST",
       data: result
-    }).then(res => {console.log(res)})
+    }).then(res => {
+      console.log(res)
+    })
   } else {
     // handle un-filled form data
     console.log('Fill em up!!!!!')
