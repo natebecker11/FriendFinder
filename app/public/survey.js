@@ -31,7 +31,10 @@ $('#submitBtn').on('click', (event) => {
       method: "POST",
       data: result
     }).then(res => {console.log(res)})
-  } else {console.log('Fill em up!!!!!')}
+  } else {
+    // handle un-filled form data
+    console.log('Fill em up!!!!!')
+  }
 })
 
 
