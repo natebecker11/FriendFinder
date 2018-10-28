@@ -14,14 +14,14 @@
 
     <hr>
     <div class='question-slider'>
-        <div class='name-email-group'>
+        <div class='name-email-group slide-group'>
             <label>Name</label>
             <input type='text' id='userName'>
             <label>Photo Url</label>
             <input type='text' id='userPhoto'>
             <button id='startSurveyBtn'>Start Survey</button>
         </div>
-      <div class='form-check question-group' id='question1'>
+      <div class='form-check question-group slide-group' id='question1'>
         <label>How likely are you to eat lunch meat outside the context of a sandwich?</label>
         <br>
         <label class='radio-container'>1
@@ -48,7 +48,7 @@
           <button class='next-btn'>Next</button>
         </div>
       </div>
-      <div class='form-check question-group' id='question2'>
+      <div class='form-check question-group slide-group' id='question2'>
         <label>How likely are you to eat a hot dog at a sports event with a mildly culturally offensive mascot?</label>
         <br>
         <input type='radio' name='question2' value='1'>
@@ -67,7 +67,7 @@
         </div>
         
       </div>
-      <div class='form-check question-group' id='question3'>
+      <div class='form-check question-group slide-group' id='question3'>
         <label>How likely are you to eat a slice of pizza that has been left out all night long?</label>
         <br>
         <input type='radio' name='question3' value='1'>
@@ -85,7 +85,7 @@
           <button class='next-btn'>Next</button>
         </div>
       </div>
-      <div class='form-check question-group' id='question4'>
+      <div class='form-check question-group slide-group' id='question4'>
         <label>How likely are you to eat with a fork that got dropped on the floor, but the waiter is pretending it didn't?</label>
         <br>
         <input type='radio' name='question4' value='1'>
@@ -103,7 +103,7 @@
           <button class='next-btn'>Next</button>
         </div>
       </div>
-      <div class='form-check question-group' id='question5'>
+      <div class='form-check question-group slide-group' id='question5'>
         <label>How likely are you to eat Taco Bell twice in the same day?</label>
         <br>
         <input type='radio' name='question5' value='1'>
@@ -121,7 +121,7 @@
           <button class='next-btn'>Next</button>
         </div>
       </div>
-      <div class='form-check question-group' id='question6'>
+      <div class='form-check question-group slide-group' id='question6'>
         <label>How likely are you to eat foraged berries and mushrooms while camping in the mountains?</label>
         <br>
         <!-- <label>1</label> -->
@@ -140,7 +140,7 @@
           <button class='next-btn'>Next</button>
         </div>
       </div>
-      <div class='form-check question-group' id='question7'>
+      <div class='form-check question-group slide-group' id='question7'>
         <label>How likely are you to eat petit fours and crudités at the opera?</label>
         <br>
         <input type='radio' name='question7' value='1'>
@@ -158,7 +158,7 @@
           <button class='next-btn'>Next</button>
         </div>
       </div>
-      <div class='form-check question-group' id='question8'>
+      <div class='form-check question-group slide-group' id='question8'>
         <label>How likely are you to eat whatever slop you're given, no matter how gray-brown?</label>
         <br>
         <input type='radio' name='question8' value='1'>
@@ -176,7 +176,7 @@
           <button class='next-btn'>Next</button>
         </div>
       </div>
-      <div class='form-check question-group' id='question9'>
+      <div class='form-check question-group slide-group' id='question9'>
         <label>How likely are you to eat a spaghetti noodle, 'Lady and the Tramp'-style, with a Trump supporter?</label>
         <br>
         <input type='radio' name='question9' value='1'>
@@ -194,7 +194,7 @@
           <button class='next-btn'>Next</button>
         </div>
       </div>
-      <div class='form-check question-group' id='question10'>
+      <div class='form-check question-group slide-group' id='question10'>
         <label>How likely are you to eat a milkshake, two straws one glass, with a Bernie supporter?</label>
         <br>
         <input type='radio' name='question10' value='1'>
@@ -211,6 +211,12 @@
           <button class='prev-btn'>Previous</button>
           <button id='submitBtn'>SUBMIT!!</button>
         </div>
+      </div>
+      <div class='results-group slide-group' id='resultsGroup'>
+        <h2>Your Match Is:</h2>
+        <img src='' alt='A picture' id='resultPic'>
+        <h3 id='resultName'></h3>
+        <h3 id='resultPercent'></h3>
       </div>
     </div>
     

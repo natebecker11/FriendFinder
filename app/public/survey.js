@@ -47,6 +47,11 @@ $('#submitBtn').on('click', (event) => {
       data: result
     }).then(res => {
       console.log(res)
+      $('#resultPic').attr({'src': res.photo, 'alt': `A picture of ${res.name}`})
+      $('#resultName').text(res.name)
+      $('#resultPercent').text(`${res.percent} Match!!`)
+      $('#question10').css('left', '-700px')
+      $('#resultsGroup').css('left', '0px')
     })
   } else {
     // handle un-filled form data
