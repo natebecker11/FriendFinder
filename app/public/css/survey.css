@@ -3,32 +3,30 @@ h1 {
 }
 
 .question-slider {
-  /* display: flex; */
   overflow-x: hidden;
-  /* -webkit-overflow-scrolling: touch;   */
-  /* scroll-snap-points-x: repeat(300px); */
-  /* scroll-snap-type: mandatory; */
   width: 700px;
   height: 400px;
   position: relative;
 }
 
-/* .slider > div {
-  flex-shrink: 0;
-  width: 300px;
-  height: 300px;
-} */
-
 .question-group {
   text-align: center;
-  /* flex-shrink: 0; */
   width: 700px;
   height: 400px;
-  /* scroll-snap-align: start; */
   position: absolute;
-  left: -700px;
+  left: 700px;
+  transition: left .5s ease-in-out;
 }
 
-#question1 {
+.name-email-group {
   left: 0px;
+  text-align: center;
+  width: 700px;
+  height: 400px;
+  position: absolute;
+  transition: left .5s ease-in-out;
+}
+
+.missing {
+  border: 1px solid red;
 }

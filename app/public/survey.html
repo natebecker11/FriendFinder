@@ -11,22 +11,16 @@
   <h1>Friend Finder</h1>
   <h2>Take a survey</h2>
   <form>
-    <label>Name</label>
-    <input type='text' id='userName'>
-    <label>Photo Url</label>
-    <input type='text' id='userPhoto'>
+
     <hr>
-    <!-- <div class='form-group'>
-      <label for='question1'>Question 1</label>
-      <select id='question1'>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div> -->
     <div class='question-slider'>
+        <div class='name-email-group'>
+            <label>Name</label>
+            <input type='text' id='userName'>
+            <label>Photo Url</label>
+            <input type='text' id='userPhoto'>
+            <button id='startSurveyBtn'>Start Survey</button>
+        </div>
       <div class='form-check question-group' id='question1'>
         <label>How likely are you to eat lunch meat outside the context of a sandwich?</label>
         <br>
@@ -215,12 +209,12 @@
         <label>5</label>
         <div class='btn-group'>
           <button class='prev-btn'>Previous</button>
-          <button class='next-btn'>SUBMIT!!</button>
+          <button id='submitBtn'>SUBMIT!!</button>
         </div>
       </div>
     </div>
     
-    <button id='submitBtn'>Submit</button>
+    <!-- <button id='submitBtn'>Submit</button> -->
   </form>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="survey.js"></script>
