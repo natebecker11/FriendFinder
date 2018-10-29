@@ -1,32 +1,6 @@
-
-// const a = [1,1,1,1,1,1,1,1,1,1]
-// const b = [3,2,3,5,5,5,1,2,3,5]
-
-// const friends = [
-//   {
-//     "name": "Joe",
-//     "photo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-//     "scores": [
-//       5, 4, 5, 4, 1, 2, 1, 2, 3, 1
-//     ]
-//   },
-//   {
-//     "name": "Tammy",
-//     "photo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-//     "scores": [
-//       1, 4, 3, 4, 2, 5, 1, 2, 4, 1
-//     ]
-//   },
-//   {
-//     "name": "Rebekah",
-//     "photo": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-//     "scores": [
-//       2, 2, 2, 4, 1, 3, 1, 5, 3, 1
-//     ]
-//   }
-// ]
-
+// function to find compatibilty rating between two arrays. Returns a numerical rating
 const rateScores = (userScores, matchScores) => {
+  // find absolute difference between the scores in each array, total these up
   let rating = userScores.reduce((total, currentScore, i) => {
     let diff = Math.abs(currentScore - matchScores[i])
     return diff + total
@@ -34,7 +8,9 @@ const rateScores = (userScores, matchScores) => {
   return rating
 }
 
+// function to cycle through friends and find the one with the best (lowest) match score. Takes an array of scores, and an array of Friend objects. Returns an object that is the best match.
 const compareRates = (userScores, friendsArray) => {
+  // reduce to find the best match. runs rateScores to find the rating of the user and the current Friend, then compares the current "best" match and the current match, returning whichever has the better rating
   let match = friendsArray.reduce((bestMatch, currentMatch) => {
     let currentRating = rateScores(userScores, currentMatch.scores)
     let bestRating = bestMatch.rating
@@ -50,7 +26,3 @@ module.exports = {
   compare: compareRates,
   rate: rateScores
 }
-
-// console.log(compareRates([
-//   5, 4, 5, 4, 1, 2, 1, 2, 3, 1
-// ], friends))

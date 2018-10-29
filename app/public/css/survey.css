@@ -120,21 +120,11 @@ input[type="radio"]:checked ~ label,input[type="radio"]:hover ~ label {
 }
 
 .question-group {
-  /* text-align: center;
-  width: 700px;
-  height: 400px;
-  position: absolute; */
   left: 700px;
-  /* transition: left .5s ease-in-out; */
 }
 
 .name-email-group {
   left: 0px;
-  /* text-align: center;
-  width: 700px;
-  height: 400px;
-  position: absolute;
-  transition: left .5s ease-in-out; */
 }
 
 .missing {
