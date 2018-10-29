@@ -1,11 +1,12 @@
 body {
   font-family: 'Rosario', sans-serif;
-  background-color: #D0E1D4;
+  background-color: #D7FFF1;
   text-align: center;
+  color: #234c73;
 }
 
-h1, h2, h3, h4, h5 {
-  color: #AE76A6;
+h1 {
+	margin-top: 150px;
 }
 
 .btn {
@@ -14,7 +15,7 @@ h1, h2, h3, h4, h5 {
 	font-size: inherit;
 	color: inherit;
   background: none;
-  background-color: #2ecc71;
+  background-color: #234c73;
 	cursor: pointer;
 	padding: 25px 80px;
 	display: inline-block;
@@ -30,49 +31,20 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-4 {
-	border-radius: 50px;
+	border-radius: 10px;
 	border: 3px solid #fff;
 	color: #fff;
 	overflow: hidden;
 }
 
 .btn-4:active {
-	border-color: #17954c;
-	color: #17954c;
+	border-color: #082138;
 }
 
 .btn-4:hover {
-	background: #24b662;
+	background: #0d3b66;
 }
 
-.btn-4:before {
-	position: absolute;
-	height: 100%;
-	font-size: 125%;
-	line-height: 3.5;
-	color: #fff;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.btn-4:active:before {
-	color: #17954c;
-}
-
-
-
-/* Button 4d */
-.btn-4d:before {
-	left: 30%;
-	opacity: 0;
-	top: 0;
-}
-
-.btn-4d:hover:before {
-	left: 10%;
-	opacity: 1;
-}
 
 input[type="radio"] {
 	opacity: 0;
@@ -82,8 +54,8 @@ input[type="radio"] {
 
 input[type='radio'] ~ label {
   padding: 5px;
-  border: 1px solid #0d3b66;
-  color: #0d3b66;
+  border: 1px solid #234c73;
+  color: #234c73;
   font-size: 20px;
   background-color: white;
   transition: all .3s ease-in-out;
@@ -96,7 +68,7 @@ input[type="radio"]:active ~ label {
 
 input[type="radio"]:checked ~ label,input[type="radio"]:hover ~ label {
   opacity: 1;
-  border: 3px solid #0d3b66;
+  border: 3px solid #234c73;
   padding: 3px;
 }
 

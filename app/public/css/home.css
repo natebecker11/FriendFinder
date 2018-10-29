@@ -1,12 +1,14 @@
 body {
   font-family: 'Rosario', sans-serif;
-  background-color: #D0E1D4;
+  background-color: #D7FFF1;
   text-align: center;
+  color: #234c73;
 }
 
-h1, h2, h3, h4, h5 {
-  color: #AE76A6;
+h1 {
+	margin-top: 150px;
 }
+
 
 .btn {
 	border: none;
@@ -14,7 +16,7 @@ h1, h2, h3, h4, h5 {
 	font-size: inherit;
 	color: inherit;
   background: none;
-  background-color: #2ecc71;
+  background-color: #234c73;
 	cursor: pointer;
 	padding: 25px 80px;
 	display: inline-block;
@@ -30,46 +32,17 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-4 {
-	border-radius: 50px;
+	border-radius: 10px;
 	border: 3px solid #fff;
 	color: #fff;
 	overflow: hidden;
 }
 
 .btn-4:active {
-	border-color: #17954c;
-	color: #17954c;
+	border-color: #082138;
+	/* color: #0c365d; */
 }
 
 .btn-4:hover {
-	background: #24b662;
-}
-
-.btn-4:before {
-	position: absolute;
-	height: 100%;
-	font-size: 125%;
-	line-height: 3.5;
-	color: #fff;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.btn-4:active:before {
-	color: #17954c;
-}
-
-
-
-/* Button 4d */
-.btn-4d:before {
-	left: 30%;
-	opacity: 0;
-	top: 0;
-}
-
-.btn-4d:hover:before {
-	left: 10%;
-	opacity: 1;
+	background: #0d3b66;
 }
