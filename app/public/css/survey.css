@@ -113,8 +113,9 @@ input[type="radio"]:checked ~ label,input[type="radio"]:hover ~ label {
 
 .question-slider {
   overflow-x: hidden;
+  overflow-y: visible;
   width: 700px;
-  height: 700px;
+  min-height: 700px;
   position: relative;
   margin: 0 auto;
 }
@@ -137,7 +138,7 @@ input[type="radio"]:checked ~ label,input[type="radio"]:hover ~ label {
 .slide-group {
   text-align: center;
   width: 700px;
-  height: 700px;
+  min-height: 700px;
   position: absolute;
   transition: left .5s ease-in-out;
 }
@@ -145,6 +146,7 @@ input[type="radio"]:checked ~ label,input[type="radio"]:hover ~ label {
 #resultPic {
   max-width: 100%;
   height: auto;
+  max-height: 500px;
 }
 
 #userName {
@@ -154,4 +156,11 @@ input[type="radio"]:checked ~ label,input[type="radio"]:hover ~ label {
 #userPhoto {
   margin-bottom: 10px;
   width: 300px;
+}
+
+@media screen and (max-width: 968px) {
+
+  .question-slider, .slide-group {
+    width: 100%;
+  }
 }
