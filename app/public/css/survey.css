@@ -60,17 +60,7 @@ h1, h2, h3, h4, h5 {
 	color: #17954c;
 }
 
-/* Button 4c */
-.btn-4c:before {
-	left: 70%;
-	opacity: 0;
-	top: 0;
-}
 
-.btn-4c:hover:before {
-	left: 80%;
-	opacity: 1;
-}
 
 /* Button 4d */
 .btn-4d:before {
