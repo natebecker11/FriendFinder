@@ -61,12 +61,12 @@ $('#submitBtn').on('click', (event) => {
 
 $('#startSurveyBtn').on('click', (event) => {
   event.preventDefault();
-  if (!$('#userName').val()) {
-    return $('#userName').addClass('missing')
-  }
-  if (!$('#userPhoto').val() || $('#userPhoto').val().substring(0, 4) !== 'http') {
-    return $('#userPhoto').addClass('missing')
-  }
+  // if (!$('#userName').val()) {
+  //   return $('#userName').addClass('missing')
+  // }
+  // if (!$('#userPhoto').val() || $('#userPhoto').val().substring(0, 4) !== 'http') {
+  //   return $('#userPhoto').addClass('missing')
+  // }
     nextQuestion()
     $('.name-email-group').css('left', '-700px')  
 })

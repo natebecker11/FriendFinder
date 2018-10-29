@@ -1,5 +1,87 @@
-h1 {
-  color: red;
+body {
+  font-family: 'Rosario', sans-serif;
+  background-color: #D0E1D4;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #AE76A6;
+}
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+  background: none;
+  background-color: #2ecc71;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-4 {
+	border-radius: 50px;
+	border: 3px solid #fff;
+	color: #fff;
+	overflow: hidden;
+}
+
+.btn-4:active {
+	border-color: #17954c;
+	color: #17954c;
+}
+
+.btn-4:hover {
+	background: #24b662;
+}
+
+.btn-4:before {
+	position: absolute;
+	height: 100%;
+	font-size: 125%;
+	line-height: 3.5;
+	color: #fff;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-4:active:before {
+	color: #17954c;
+}
+
+/* Button 4c */
+.btn-4c:before {
+	left: 70%;
+	opacity: 0;
+	top: 0;
+}
+
+.btn-4c:hover:before {
+	left: 80%;
+	opacity: 1;
+}
+
+/* Button 4d */
+.btn-4d:before {
+	left: 30%;
+	opacity: 0;
+	top: 0;
+}
+
+.btn-4d:hover:before {
+	left: 10%;
+	opacity: 1;
 }
 
 input[type="radio"] {
@@ -8,25 +90,43 @@ input[type="radio"] {
   height: 0;
 }
 
+input[type='radio'] ~ label {
+  padding: 5px;
+  border: 1px solid #0d3b66;
+  color: #0d3b66;
+  font-size: 20px;
+  background-color: white;
+  transition: all .3s ease-in-out;
+  box-sizing: content-box;
+}
 input[type="radio"]:active ~ label {
   opacity: 1;
+
 }
 
-input[type="radio"]:checked ~ label {
+input[type="radio"]:checked ~ label,input[type="radio"]:hover ~ label {
   opacity: 1;
-	border: 1px solid black;
+  border: 3px solid #0d3b66;
+  padding: 3px;
 }
 
 .radio-holder {
   display: inline-block;
   font-family: 'Spicy Rice', cursive;
+  margin-top: 12px;
+
+}
+
+.survey-question {
+  margin-bottom: 5px;
 }
 
 .question-slider {
   overflow-x: hidden;
   width: 700px;
-  height: 400px;
+  height: 700px;
   position: relative;
+  margin: 0 auto;
 }
 
 .question-group {
@@ -57,7 +157,21 @@ input[type="radio"]:checked ~ label {
 .slide-group {
   text-align: center;
   width: 700px;
-  height: 400px;
+  height: 700px;
   position: absolute;
   transition: left .5s ease-in-out;
+}
+
+#resultPic {
+  max-width: 100%;
+  height: auto;
+}
+
+#userName {
+  margin-bottom: 10px;
+}
+
+#userPhoto {
+  margin-bottom: 10px;
+  width: 300px;
 }

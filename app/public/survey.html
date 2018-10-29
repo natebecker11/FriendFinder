@@ -11,20 +11,20 @@
 </head>
 <body>
   <h1>Friend Finder</h1>
-  <h2>Take a survey</h2>
+  <h2>Answer Some Questions To Find Your Perfect Match!</h2>
   <form>
 
-    <hr>
+
     <div class='question-slider'>
         <div class='name-email-group slide-group'>
-            <label>Name</label>
-            <input type='text' id='userName'>
-            <label>Photo Url</label>
-            <input type='text' id='userPhoto'>
-            <button id='startSurveyBtn'>Start Survey</button>
+            <label for='userName'>Enter Your Name</label><br>
+            <input type='text' id='userName'><br>
+            <label for='userPhoto'>Link A Photo Of Yourself</label><br>
+            <input type='text' id='userPhoto'><br>
+            <button id='startSurveyBtn' class='btn btn-4 btn-4d'>Start Survey</button>
         </div>
       <div class='form-check question-group slide-group' id='question1'>
-        <label>How likely are you to eat lunch meat outside the context of a sandwich?</label>
+        <label class='survey-question'>How likely are you to eat lunch meat outside the context of a sandwich?</label>
         <br>
         <div class='radio-holder'>
           <input type='radio' name='question1' value='1' id='q1a1'>
@@ -47,13 +47,13 @@
           <label for='q1a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn' disabled>Previous</button>
-          <button class='next-btn'>Next</button>
+          <!-- <button class='prev-btn btn btn-4 btn-4d' disabled>Previous</button> -->
+          <button class='next-btn btn btn-4 btn-4d'>Next</button>
         </div>
       </div>
       <div class='form-check question-group slide-group' id='question2'>
-        <label>How likely are you to eat a hot dog at a sports event with a mildly culturally offensive mascot?</label>
-        <br>
+        <label class='survey-question'>How likely are you to eat a hot dog at a sports event with a mildly culturally offensive mascot?</label>
+        <br><br>
         <div class='radio-holder'>
           <input type='radio' name='question2' value='1' id='q2a1'>
           <label for='q2a1'>1</label>
@@ -75,12 +75,12 @@
           <label for='q2a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn'>Previous</button>
-          <button class='next-btn'>Next</button>
+          <button class='prev-btn btn btn-4 btn-4d'>Previous</button>
+          <button class='next-btn btn btn-4 btn-4d'>Next</button>
         </div>        
       </div>
       <div class='form-check question-group slide-group' id='question3'>
-        <label>How likely are you to eat a slice of pizza that has been left out all night long?</label>
+        <label class='survey-question'>How likely are you to eat a slice of pizza that has been left out all night long?</label>
         <br>
         <div class='radio-holder'>
           <input type='radio' name='question3' value='1' id='q3a1'>
@@ -103,12 +103,12 @@
           <label for='q3a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn'>Previous</button>
-          <button class='next-btn'>Next</button>
+          <button class='prev-btn btn btn-4 btn-4d'>Previous</button>
+          <button class='next-btn btn btn-4 btn-4d'>Next</button>
         </div>
       </div>
       <div class='form-check question-group slide-group' id='question4'>
-        <label>How likely are you to eat with a fork that got dropped on the floor, but the waiter is pretending it didn't?</label>
+        <label class='survey-question'>How likely are you to eat with a fork that got dropped on the floor, but the waiter is pretending it didn't?</label>
         <br>
         <div class='radio-holder'>
           <input type='radio' name='question4' value='1' id='q4a1'>
@@ -131,12 +131,12 @@
           <label for='q4a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn'>Previous</button>
-          <button class='next-btn'>Next</button>
+          <button class='prev-btn btn btn-4 btn-4d'>Previous</button>
+          <button class='next-btn btn btn-4 btn-4d'>Next</button>
         </div>
       </div>
       <div class='form-check question-group slide-group' id='question5'>
-        <label>How likely are you to eat Taco Bell twice in the same day?</label>
+        <label class='survey-question'>How likely are you to eat Taco Bell twice in the same day?</label>
         <br>
         <div class='radio-holder'>
           <input type='radio' name='question5' value='1' id='q5a1'>
@@ -159,12 +159,12 @@
           <label for='q5a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn'>Previous</button>
-          <button class='next-btn'>Next</button>
+          <button class='prev-btn btn btn-4 btn-4d'>Previous</button>
+          <button class='next-btn btn btn-4 btn-4d'>Next</button>
         </div>
       </div>
       <div class='form-check question-group slide-group' id='question6'>
-        <label>How likely are you to eat foraged berries and mushrooms while camping in the mountains?</label>
+        <label class='survey-question'>How likely are you to eat foraged berries and mushrooms while camping in the mountains?</label>
         <br>
         <div class='radio-holder'>
           <input type='radio' name='question6' value='1' id='q6a1'>
@@ -187,12 +187,12 @@
           <label for='q6a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn'>Previous</button>
-          <button class='next-btn'>Next</button>
+          <button class='prev-btn btn btn-4 btn-4d'>Previous</button>
+          <button class='next-btn btn btn-4 btn-4d'>Next</button>
         </div>
       </div>
       <div class='form-check question-group slide-group' id='question7'>
-        <label>How likely are you to eat petit fours and crudités at the opera?</label>
+        <label class='survey-question'>How likely are you to eat petit fours and crudités at the opera?</label>
         <br>
         <div class='radio-holder'>
           <input type='radio' name='question7' value='1' id='q7a1'>
@@ -215,12 +215,12 @@
           <label for='q7a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn'>Previous</button>
-          <button class='next-btn'>Next</button>
+          <button class='prev-btn btn btn-4 btn-4d'>Previous</button>
+          <button class='next-btn btn btn-4 btn-4d'>Next</button>
         </div>
       </div>
       <div class='form-check question-group slide-group' id='question8'>
-        <label>How likely are you to eat whatever slop you're given, no matter how gray-brown?</label>
+        <label class='survey-question'>How likely are you to eat whatever slop you're given, no matter how gray-brown?</label>
         <br>
         <div class='radio-holder'>
           <input type='radio' name='question8' value='1' id='q8a1'>
@@ -243,12 +243,12 @@
           <label for='q8a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn'>Previous</button>
-          <button class='next-btn'>Next</button>
+          <button class='prev-btn btn btn-4 btn-4d'>Previous</button>
+          <button class='next-btn btn btn-4 btn-4d'>Next</button>
         </div>
       </div>
       <div class='form-check question-group slide-group' id='question9'>
-        <label>How likely are you to eat a spaghetti noodle, 'Lady and the Tramp'-style, with a Trump supporter?</label>
+        <label class='survey-question'>How likely are you to eat a spaghetti noodle, 'Lady and the Tramp'-style, with a Trump supporter?</label>
         <br>
         <div class='radio-holder'>
           <input type='radio' name='question9' value='1' id='q9a1'>
@@ -271,12 +271,12 @@
           <label for='q9a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn'>Previous</button>
-          <button class='next-btn'>Next</button>
+          <button class='prev-btn btn btn-4 btn-4d'>Previous</button>
+          <button class='next-btn btn btn-4 btn-4d'>Next</button>
         </div>
       </div>
       <div class='form-check question-group slide-group' id='question10'>
-        <label>How likely are you to eat a milkshake, two straws one glass, with a Bernie supporter?</label>
+        <label class='survey-question'>How likely are you to eat a milkshake, two straws one glass, with a Bernie supporter?</label>
         <br>
         <div class='radio-holder'>
           <input type='radio' name='question10' value='1' id='q10a1'>
@@ -299,8 +299,8 @@
           <label for='q10a5'>5</label>
         </div>
         <div class='btn-group'>
-          <button class='prev-btn'>Previous</button>
-          <button id='submitBtn'>SUBMIT!!</button>
+          <button class='prev-btn btn btn-4 btn-4d'>Previous</button>
+          <button id='submitBtn' class='btn btn-4 btn-4d'>SUBMIT!!</button>
         </div>
       </div>
       <div class='results-group slide-group' id='resultsGroup'>
